@@ -17,8 +17,8 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
-              // className="text-4xl md:text-6xl font-bold text-white mb-6"
+              // FIX: Changed text color to white to be visible on the dark background
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               Hi, I'm{' '}
               <motion.span
@@ -37,16 +37,16 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl md:text-2xl text-gray-300 mb-8"
             >
-              Full Stack Developer 
+              Full Stack Developer
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-lg text-gray-400 mb-10 max-w-2xl"
+              className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0"
             >
-           I create beautiful, responsive, and full-stack web applications using modern technologies. Passionate about clean code, seamless user experiences, and innovative solutions.
+              I create beautiful, responsive, and full-stack web applications using modern technologies. Passionate about clean code, seamless user experiences, and innovative solutions.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -56,28 +56,25 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
             >
-            <a 
-                href="/resume.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                // download="Ojasv_Dixit_Resume.pdf"
+              {/* FIX: Refactored to motion.a and made responsive */}
+              <motion.a
+                href="/Ojasv_Dixit_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors shadow-lg"
               >
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors shadow-lg"
-                >
-                  <FiDownload />
-                  View Resume
-                </motion.button>
-              </a>
+                <FiDownload />
+                View Resume
+              </motion.a>
 
-              
+              {/* FIX: Made responsive */}
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-black transition-colors"
+                className="w-full sm:w-auto border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold flex items-center justify-center hover:bg-blue-400 hover:text-black transition-colors"
               >
                 Get In Touch
               </motion.a>
@@ -93,13 +90,13 @@ const Hero = () => {
               {[
                 { icon: FiGithub, href: 'https://github.com/Ojasvdixit', label: 'GitHub' },
                 { icon: FiLinkedin, href: 'https://www.linkedin.com/in/ojasv-dixit-a1410b230/', label: 'LinkedIn' },
-                { icon: FiMail, href: '#', label: 'Email' }
-              ].map((social, index) => (
+                { icon: FiMail, href: 'mailto:ojasvdixit1@gmail.com', label: 'Email' }
+              ].map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
-                target="_blank" 
-                rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                   className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all text-white hover:text-blue-400 hover:bg-white/20"
@@ -122,7 +119,8 @@ const Hero = () => {
               transition={{ type: 'spring', stiffness: 300 }}
               className="relative"
             >
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+              {/* FIX: Made image size responsive */}
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white">
                 <img
                   src="/passport photo.jpg"
                   alt="Profile"
