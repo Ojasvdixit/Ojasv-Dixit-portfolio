@@ -19,14 +19,15 @@ const Projects = () => {
       liveUrl: 'https://textmania-clinet.onrender.com/',
       githubUrl: 'https://github.com/Ojasvdixit/TextMania'
     },
-    {
-        title: 'Rock Paper Scissors Game',
-        description: 'An interactive Rock Paper Scissors game built with Javascript, featuring a sleek design and engaging gameplay.',
-        image: 'https://images.pexels.com/photos/163077/fingers-hand-rock-paper-scissors-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
-        technologies: ['Javascript', 'CSS'],
-        liveUrl: 'https://rock-paper-scissor-theta-pink.vercel.app/',
-        githubUrl: 'https://github.com/Ojasvdixit/Rock_Paper_Scissor'
-    }
+   {
+  title: 'Rock Paper Scissors Game',
+  description: 'An interactive Rock Paper Scissors game built with Javascript, featuring a sleek design and engaging gameplay.',
+  image: 'https://via.placeholder.com/800x500?text=Rock+Paper+Scissors+Game', // ✅ dummy placeholder
+  technologies: ['Javascript', 'CSS'],
+  liveUrl: 'https://rock-paper-scissor-theta-pink.vercel.app/',
+  githubUrl: 'https://github.com/Ojasvdixit/Rock_Paper_Scissor'
+}
+
   ];
 
   return (
