@@ -16,12 +16,13 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <motion.div
+          <motion.a
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold text-white"
+           href ={`#home`}
           >
             Portfolio
-          </motion.div>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">

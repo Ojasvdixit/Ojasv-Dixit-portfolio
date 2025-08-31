@@ -44,7 +44,7 @@ const Contact = () => {
 
       if (jsonResponse.success) {
         setResult('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Clear the form
+        setFormData({ name: '', email: '', message: '' }); 
       } else {
         console.error('Submission failed:', jsonResponse);
         setResult(jsonResponse.message || 'Something went wrong.');
@@ -72,13 +72,13 @@ const Contact = () => {
             Get In <span className="text-blue-400">Touch</span>
           </h2>
           <p className="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-            Have a project in mind, a question, or just want to say hello? My inbox is always open.
+            Have a project in mind, a question, or just want to say hello?
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <motion.form
-            onSubmit={handleSubmit} // Added onSubmit handler
+            onSubmit={handleSubmit} 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
