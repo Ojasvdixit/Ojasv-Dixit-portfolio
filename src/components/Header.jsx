@@ -1,11 +1,19 @@
-import { motion } from 'framer-motion';
-import { FiMenu, FiX } from 'react-icons/fi';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { FiMenu, FiX } from "react-icons/fi";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Skills", path: "/skills" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <motion.header
@@ -16,32 +24,36 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-white"
-           href ={`#home`}
-          >
-            Portfolio
-          </motion.a>
+          {/* Logo */}
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Link to="/" className="text-2xl font-bold text-white">
+              Portfolio
+            </Link>
+          </motion.div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+              <motion.div
+                key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.5 }}
-                whileHover={{ scale: 1.1, color: '#3B82F6' }}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium"
+                whileHover={{ scale: 1.1 }}
               >
-                {item}
-              </motion.a>
+                <Link
+                  to={item.path}
+                  className={`transition-colors duration-300 font-medium ${
+                    location.pathname === item.path
+                      ? "text-blue-400"
+                      : "text-gray-300 hover:text-blue-400"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -54,21 +66,28 @@ const Header = () => {
         {/* Mobile Navigation */}
         <motion.nav
           initial={false}
-          animate={{ height: isMenuOpen ? 'auto' : 0, opacity: isMenuOpen ? 1 : 0 }}
+          animate={{
+            height: isMenuOpen ? "auto" : 0,
+            opacity: isMenuOpen ? 1 : 0,
+          }}
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden"
         >
           <div className="py-4 space-y-4">
             {navItems.map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                whileHover={{ x: 10 }}
-                onClick={() => setIsMenuOpen(false)}
-                className="block text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium"
-              >
-                {item}
-              </motion.a>
+              <motion.div key={item.name} whileHover={{ x: 10 }}>
+                <Link
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block transition-colors duration-300 font-medium ${
+                    location.pathname === item.path
+                      ? "text-blue-400"
+                      : "text-gray-300 hover:text-blue-400"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </motion.nav>
