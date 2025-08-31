@@ -46,8 +46,7 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg text-gray-400 mb-10 max-w-2xl"
             >
-              I create beautiful, responsive web applications with modern technologies.
-              Passionate about clean code, user experience, and innovative solutions.
+           I create beautiful, responsive, and full-stack web applications using modern technologies. Passionate about clean code, seamless user experiences, and innovative solutions.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -57,14 +56,22 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10"
             >
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors shadow-lg"
+            <a 
+                href="/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                // download="Ojasv_Dixit_Resume.pdf"
               >
-                <FiDownload />
-                Download Resume
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors shadow-lg"
+                >
+                  <FiDownload />
+                  View Resume
+                </motion.button>
+              </a>
+
               
               <motion.a
                 href="#contact"
@@ -84,13 +91,15 @@ const Hero = () => {
               className="flex gap-6 justify-center lg:justify-start"
             >
               {[
-                { icon: FiGithub, href: '#', label: 'GitHub' },
-                { icon: FiLinkedin, href: '#', label: 'LinkedIn' },
+                { icon: FiGithub, href: 'https://github.com/Ojasvdixit', label: 'GitHub' },
+                { icon: FiLinkedin, href: 'https://www.linkedin.com/in/ojasv-dixit-a1410b230/', label: 'LinkedIn' },
                 { icon: FiMail, href: '#', label: 'Email' }
               ].map((social, index) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
+                target="_blank" 
+                rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                   className="p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all text-white hover:text-blue-400 hover:bg-white/20"

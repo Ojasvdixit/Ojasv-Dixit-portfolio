@@ -66,13 +66,10 @@ const About = () => {
             className="text-lg text-gray-300 space-y-6"
           >
             <p>
-              Hello! I'm John Doe, a Full Stack Developer based in Tech City. My passion for web development started back in college when I built my first static website. Since then, I've been hooked on the process of turning complex problems into beautiful, intuitive, and efficient web applications.
+              Hello! I'm Ojasv Dixit, a Full Stack Developer based in Noida City. My passion for web development started back in college when I built my first static website. Since then, I've been hooked on the process of turning complex problems into beautiful, intuitive, and efficient web applications.
             </p>
             <p>
               I specialize in the MERN stack (MongoDB, Express, React, Node.js) but I'm always eager to learn new technologies and frameworks to broaden my skillset. My goal is to not only write clean and maintainable code but also to create seamless user experiences that leave a lasting impression.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or enjoying a good cup of coffee.
             </p>
           </motion.div>
           
@@ -88,7 +85,7 @@ const About = () => {
               <FiBriefcase className="text-blue-400 mt-1" size={28} />
               <div>
                 <h3 className="text-xl font-semibold text-white">Experience</h3>
-                <p className="text-gray-400">3+ Years of professional experience in web development, working with startups and established companies to deliver high-quality products.</p>
+                <p className="text-gray-400">1+ Years of professional experience in web development, working with startups and established companies to deliver high-quality products.</p>
               </div>
             </motion.div>
             
@@ -96,7 +93,7 @@ const About = () => {
               <FiAward className="text-blue-400 mt-1" size={28} />
               <div>
                 <h3 className="text-xl font-semibold text-white">Education</h3>
-                <p className="text-gray-400">B.Sc. in Computer Science from the University of Technology, where I graduated with honors and focused on software engineering principles.</p>
+                <p className="text-gray-400">B.Tech. in Computer Science from the Sagar Institute of Science Technology and Engineering, where I graduated with honors and focused on software engineering principles.</p>
               </div>
             </motion.div>
 
@@ -104,7 +101,7 @@ const About = () => {
               <FiHeart className="text-blue-400 mt-1" size={28} />
               <div>
                 <h3 className="text-xl font-semibold text-white">Hobbies</h3>
-                <p className="text-gray-400">Beyond the screen, I enjoy hiking in nature, landscape photography, and playing the guitar to unwind and spark creativity.</p>
+                <p className="text-gray-400">Beyond the screen, I enjoy playing Table Tennis, Volleyball, listening to music and watching movies.</p>
               </div>
             </motion.div>
           </motion.div>
