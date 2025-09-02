@@ -58,7 +58,7 @@ const Hero = () => {
             >
               {/* FIX: Refactored to motion.a and made responsive */}
               <motion.a
-                href="/Ojasv_Dixit_Resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
