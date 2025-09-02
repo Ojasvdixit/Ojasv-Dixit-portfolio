@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+   const navigate = useNavigate();
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,6 +73,7 @@ const Hero = () => {
 
               {/* FIX: Made responsive */}
               <motion.a
+                onClick={() => navigate("/contact")}
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
