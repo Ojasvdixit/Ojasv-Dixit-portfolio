@@ -28,6 +28,3 @@ It showcases my **skills, projects, experience, and contact information**, along
 - **Routing**: React Router
 - **Deployment**: Netlify
 
----
-
-## 📂 Project Structure
