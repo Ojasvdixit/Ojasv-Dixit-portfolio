@@ -39,7 +39,7 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl md:text-2xl text-gray-300 mb-8"
             >
-              Web Developer
+              Frontend Developer
             </motion.p>
 
             <motion.p
@@ -48,7 +48,7 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0"
             >
-              I create beautiful, responsive, and full-stack web applications using modern technologies. Passionate about clean code, seamless user experiences, and innovative solutions.
+              I create responsive, and full-stack web applications using modern technologies. Passionate about clean code, seamless user experiences, and innovative solutions.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -60,7 +60,7 @@ const Hero = () => {
             >
               {/* FIX: Refactored to motion.a and made responsive */}
               <motion.a
-                href="/resume.pdf"
+                href="/Ojasv_Dixit_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
